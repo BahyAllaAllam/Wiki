@@ -1,0 +1,27 @@
+{% extends "encyclopedia/base.html" %}
+
+{% block title %}
+    Encyclopedia Search
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+   <div class="col-md-8 offset-md-2">
+{% if results %}
+       <h2>
+           Found {{results|length}}
+       </h2>
+{% endif %}
+{% for result in results %}
+
+  <a href="{% url 'detail' result %}"><h3>{{ result }}</h3></a>
+
+{% empty %}
+       <h3>No results found.</h3>
+{% endfor %}
+
+   </div>
+
+</div>
+{% endblock %}
