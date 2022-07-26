@@ -2,11 +2,12 @@
 {% load markdownify %}
 
 {% block title %}
-    Encyclopedia
+    Encyclopedia-{{title}}
 {% endblock %}
 
 {% block body %}
 
     {{ entry|markdownify  }}
+<a href="{% url 'encyclopedia:edit' title %}">Edit</a>
 
 {% endblock %}

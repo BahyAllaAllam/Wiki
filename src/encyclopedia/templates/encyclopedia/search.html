@@ -15,7 +15,7 @@
 {% endif %}
 {% for result in results %}
 
-  <a href="{% url 'detail' result %}"><h3>{{ result }}</h3></a>
+  <a href="{% url 'encyclopedia:detail' result %}"><h3>{{ result }}</h3></a>
 
 {% empty %}
        <h3>No results found.</h3>

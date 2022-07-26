@@ -1,0 +1,21 @@
+{% extends "encyclopedia/base.html" %}
+
+{% block title %}
+    Encyclopedia-{{title}}-edit
+{% endblock %}
+
+{% block body %}
+<div class="container">
+
+   <div class="col-md-8 offset-md-2">
+       <form method="post" action="{% url 'encyclopedia:edit' title %}">
+
+           {% csrf_token %}
+           {% if content %}
+           <textarea class="textarea" name="content" placeholder="Content" rows="6" cols="70">{{ content }}</textarea>
+           {% endif %}
+           <input type="submit" value="Save">
+       </form>
+   </div>
+</div>
+{% endblock %}
