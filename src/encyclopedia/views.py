@@ -62,7 +62,6 @@ def create(request):
                 #return HttpResponseRedirect(request.path_info)
 
         util.save_entry(title, content)
-        messages.success(request, 'Your entry has been add successfully !')
         return redirect('encyclopedia:detail', title)
 
     return render(request, "encyclopedia/create.html")
@@ -74,7 +73,6 @@ def edit(request, title):
     if request.method == "POST":
         content= request.POST.get('content')
         util.save_entry(title, content)
-        messages.success(request, 'Your entry has been edited successfully !')
         return redirect('encyclopedia:detail', title)
 
     context= {'title':title, 'content':content}
