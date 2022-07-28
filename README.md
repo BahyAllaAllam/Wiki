@@ -16,10 +16,10 @@ files and I used the django-markdownify package to convert it to HTML for displa
 * Every entry has a detail page containg the title, the content and edit button to
 edit the content only.
 
-2- **Creating New Entry Page**
+3- **Creating New Entry Page**
 * Form containing two inputs one for the title and one for the content and a save button.
 
-3- **Edit Page**
+4- **Edit Page**
 * Form containing one input pre-populated with the existing Markdown content of the page.
 
 ### How to Install and Run the Project
