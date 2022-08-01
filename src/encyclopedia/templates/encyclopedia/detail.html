@@ -2,12 +2,12 @@
 {% load markdownify %}
 
 {% block title %}
-    Encyclopedia-{{title}}
+    Encyclopedia {{title}}
 {% endblock %}
 
 {% block body %}
 
     {{ entry|markdownify  }}
-<a href="{% url 'encyclopedia:edit' title %}">Edit</a>
+<a class="w3-button w3-black w3-round-large w3-mobile" href="{% url 'encyclopedia:edit' title %}">Edit</a>
 
 {% endblock %}
